@@ -98,11 +98,7 @@ const Hero: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full h-screen max-h-screen bg-custom-gradient">
-                <div className="container mx-auto h-full flex items-center justify-center">
-                    <h2 className="text-4xl text-white">Next Section</h2>
-                </div>
-            </section>
+            
         </div>
 
     );
