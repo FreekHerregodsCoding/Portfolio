@@ -60,8 +60,38 @@ const experience = {
             duration: '2024 - Present',
         },
         {
-            title: 'Internship',
-            description: 'Front-end Developer at Qite',
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
+            duration: '2024',
+        },
+        {
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
+            duration: '2024',
+        },
+        {
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
+            duration: '2024',
+        },
+        {
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
+            duration: '2024',
+        },
+        {
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
+            duration: '2024',
+        },
+        {
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
+            duration: '2024',
+        },
+        {
+            title: 'Internship Front-end Developer',
+            description: 'Qite',
             duration: '2024',
         },
     ],
@@ -130,21 +160,41 @@ const education = {
 
 const InformationTab: React.FC = () => {
     return (
-        <section className="w-full h-screen max-h-screen bg-custom-bg-color-section2">
-                <div className="container mx-auto h-full flex items-center justify-center text-white">
+        <section className="w-screen h-screen text-white bg-custom-bg-color-section2 flex items-center justify-center">
+            <div className="container mx-auto w-[80vw]">
                 <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-16'>
-                    <TabsList className='flex flex-col w-full max-w-96 mx-auto xl-mx-0 gap-5'>
+                    <TabsList className='flex flex-col w-full max-w-96 mx-auto xl:mx-0 gap-5'>
                         <TabsTrigger value="experience">Experience</TabsTrigger>
                         <TabsTrigger value="education">Education</TabsTrigger>
                         <TabsTrigger value="skills">Skills</TabsTrigger>
                         <TabsTrigger value="about-me">About me</TabsTrigger>
                     </TabsList>
                     <div className='min-h-[70vh] w-full'>
-                        <TabsContent value="experience" className="w-full">Experience</TabsContent>
+                        <TabsContent value="experience" className="w-full">
+                            <div className='flex flex-col gap-7 text-center xl:text-left'>
+                                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                                <p className='max-w-xl text-white/60 mx-auto xl:mx-0'>
+                                    {experience.description}
+                                </p>
+                                <ScrollArea className='h-[400px]'>
+                                    <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
+                                        {experience.info.map((item, index) => (
+                                            <li key={index} className='bg-black h-[120px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
+                                                <span>{item.duration}</span>
+                                                <span>{item.title}</span>
+
+                                                <h3>{item.description}</h3>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
+                        </TabsContent>
+                        <TabsContent value="education" className="w-full">Education</TabsContent>
+                        <TabsContent value="skills" className="w-full">Skills</TabsContent>
+                        <TabsContent value="about-me" className="w-full">About me</TabsContent>
                     </div>
                 </Tabs>
-
-                
             </div>
         </section>
     );
