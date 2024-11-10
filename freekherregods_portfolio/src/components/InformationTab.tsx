@@ -179,7 +179,7 @@ const InformationTab: React.FC = () => {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {experience.info.map((item, index) => (
-                                            <li key={index} className='bg-black h-[120px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
+                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[120px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
                                                 <span>{item.duration}</span>
                                                 <span>{item.title}</span>
 
