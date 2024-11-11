@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
 
     return (
         <div>
-            <section className="max-w-screen w-full h-screen max-h-screen bg-custom-bg-color-gray">
+            <section className="max-w-screen w-screen h-screen max-h-screen bg-custom-bg-color-gray">
                 <div className="container mx-auto h-full flex flex-col justify-between">
                     {/* topcontent */}
                     <div className='hidden lg:flex justify-between font-medium text-custom-header-text mt-8 lg:mx-4 xl:mx-4'>
@@ -98,11 +98,7 @@ const Hero: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full h-screen max-h-screen bg-custom-gradient">
-                <div className="container mx-auto h-full flex items-center justify-center">
-                    <h2 className="text-4xl text-white">Next Section</h2>
-                </div>
-            </section>
+            
         </div>
 
     );

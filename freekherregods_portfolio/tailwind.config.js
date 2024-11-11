@@ -17,6 +17,9 @@ export default {
       backgroundColor: {
         'custom-bg-color-gray': '#c5bba8',
         'custom-bg-color-blue': '#45576F',
+        'custom-bg-color-button-active': '#758694',
+        'custom-bg-color-button-disabled': '#405D72',
+        'custom-bg-color-section2': '#A0937D',
       },
     },
   },

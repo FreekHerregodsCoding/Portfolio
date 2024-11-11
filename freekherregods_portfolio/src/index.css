@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Rajdhani', sans-serif;
-  background-color: #c5bba8;
+  background-color: #A0937D;
   color: black;
 }
 
@@ -41,10 +41,3 @@ h6 {
   animation: pulsate 2s infinite;
 }
 
-.bg-custom-gradient {
-  background: #968D72;
-}
-
-.bg-custom-gradient-2 {
-  background: linear-gradient(180deg, #968D72 0%, #c5bba8 30%, #c5bba8 100%);
-}
