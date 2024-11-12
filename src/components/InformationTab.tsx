@@ -61,7 +61,7 @@ const experience = {
         },
         {
             title: 'Freelance Front-end Developer',
-            description: 'Website for HB Photography (GatsbyJS)',
+            description: 'Website for HB Photography',
             duration: '2024',
         },
         {
@@ -136,7 +136,7 @@ const education = {
 
 const InformationTab: React.FC = () => {
     return (
-        <section className="w-screen h-screen text-white bg-custom-bg-color-section2 flex items-center justify-center">
+        <section className="w-screen h-screen  bg-custom-bg-color-section2 flex items-center justify-center">
             <div className="container mx-auto w-[80vw]">
                 <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-16'>
                     <TabsList className='flex flex-col w-full max-w-96 mx-auto xl:mx-0 gap-5'>
@@ -147,19 +147,19 @@ const InformationTab: React.FC = () => {
                     </TabsList>
                     <div className='min-h-[70vh] w-full'>
                         <TabsContent value="experience" className="w-full">
-                            <div className='flex flex-col gap-7 text-center xl:text-left'>
+                            <div className='flex flex-col gap-7 text-center text-black xl:text-left'>
                                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                                <p className='max-w-xl text-white text-lg mx-auto xl:mx-0'>
+                                <p className='max-w-xl text-lg mx-auto xl:mx-0'>
                                     {experience.description}
                                 </p>
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {experience.info.map((item, index) => (
-                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[120px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
-                                                <span className='text-cyan-500'>{item.duration}</span>
-                                                <h3 className='text-xl text-center lg:text-left'>{item.title}</h3>
+                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[140px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
+                                                <span className='text-cyan-300'>{item.duration}</span>
+                                                <h3 className='text-lg text-center lg:text-left text-white'>{item.title}</h3>
                                                 <div className="flex items-center gap-3">
-                                                    <span className='w-[6px] h-[6px] rounded-full bg-cyan-500'></span>
+                                                    <span className='w-[6px] h-[6px] rounded-full bg-cyan-300'></span>
                                                     <p className='text-white/80'>{item.description}</p>
 
                                                 </div>
