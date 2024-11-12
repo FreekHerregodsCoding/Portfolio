@@ -36,6 +36,9 @@ const Hero: React.FC = () => {
         handleScroll(null, 1);
     };
 
+
+
+
     return (
         <div>
             <section className="max-w-screen w-screen h-screen max-h-screen bg-custom-bg-color-gray">
@@ -98,7 +101,7 @@ const Hero: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
         </div>
 
     );
