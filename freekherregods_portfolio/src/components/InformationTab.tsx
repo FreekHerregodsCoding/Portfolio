@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, TabsContent, TabslList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -7,7 +7,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { FaHtml5, FaCss3Alt, FaReact, FaVuejs, FaAngular } from 'react-icons/fa';
 import { SiTailwindcss, SiGatsby } from 'react-icons/si';
 import '../index.css';
-import { TabsList } from '@radix-ui/react-tabs';
+
 
 //about data
 const about = {
@@ -60,8 +60,8 @@ const experience = {
             duration: '2024 - Present',
         },
         {
-            title: 'Internship Front-end Developer',
-            description: 'Qite',
+            title: 'Freelance Front-end Developer',
+            description: 'Website for HB Photography (GatsbyJS)',
             duration: '2024',
         },
         {
@@ -69,31 +69,7 @@ const experience = {
             description: 'Qite',
             duration: '2024',
         },
-        {
-            title: 'Internship Front-end Developer',
-            description: 'Qite',
-            duration: '2024',
-        },
-        {
-            title: 'Internship Front-end Developer',
-            description: 'Qite',
-            duration: '2024',
-        },
-        {
-            title: 'Internship Front-end Developer',
-            description: 'Qite',
-            duration: '2024',
-        },
-        {
-            title: 'Internship Front-end Developer',
-            description: 'Qite',
-            duration: '2024',
-        },
-        {
-            title: 'Internship Front-end Developer',
-            description: 'Qite',
-            duration: '2024',
-        },
+
     ],
 }
 
