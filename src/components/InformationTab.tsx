@@ -156,10 +156,13 @@ const InformationTab: React.FC = () => {
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {experience.info.map((item, index) => (
                                             <li key={index} className='bg-custom-bg-color-button-disabled h-[120px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
-                                                <span>{item.duration}</span>
-                                                <span>{item.title}</span>
+                                                <span className='text-cyan-500'>{item.duration}</span>
+                                                <h3 className='text-xl text-center lg:text-left'>{item.title}</h3>
+                                                <div className="flex items-center gap-3">
+                                                    <span className='w-[6px] h-[6px] rounded-full bg-cyan-500'></span>
+                                                    <p className='text-white/80'>{item.description}</p>
 
-                                                <h3>{item.description}</h3>
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
