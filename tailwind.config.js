@@ -23,7 +23,7 @@ export default {
       },
       textColor: {
         'custom-duration': '#A27B5C',
-        
+        'custom-bg-color-button-disabled': '#2C3639',
       },
     },
   },
