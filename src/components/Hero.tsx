@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import testFoto from '../assets/image.jpg';
+import { Link } from 'react-router-dom';
 import { MdArrowDownward } from 'react-icons/md';
 
 import { Carousel } from 'react-responsive-carousel';
@@ -44,11 +45,11 @@ const Hero: React.FC = () => {
             <section className="max-w-screen w-screen h-screen max-h-screen bg-custom-bg-color-gray">
                 <div className="container mx-auto h-full flex flex-col justify-between">
                     {/* topcontent */}
-                    <div className='hidden lg:flex justify-between font-medium text-custom-header-text mt-8 lg:mx-4 xl:mx-4'>
+                    <div className='hidden lg:flex justify-between font-medium text-custom-header-text mt-8 lg:mx-4 xl:mx-6'>
                         <p>Graduated in "Web Development & Design"</p>
                         <p>Currently looking for a front-end job</p>
                         <p>Based in Lierde, Belgium</p>
-                        <p className='font-bold'>Contact me </p>
+                        <Link to="/contact" className='font-bold'>Contact me</Link>
                     </div>
                     <div className='lg:hidden mt-8 flex justify-center items-center h-16 mx-10'>
                         <Carousel
@@ -76,10 +77,10 @@ const Hero: React.FC = () => {
                         </Carousel>
                     </div>
                     {/* header and image */}
-                    <div className='leading-none mt-20 mx-6 lg:mx-4 xl:mx-4 flex justify-between items-center lg:items-start'>
+                    <div className='leading-none mt-20 mx-6 lg:mx-4 xl:mx-6 flex justify-between items-center lg:items-start'>
                         <div className='leading-none'>
-                            <h1 className='font-semibold lg:text-custom-header-title-7rem xl:text-custom-header-title text-5xl md:text-7xl'>FREEK</h1>
-                            <h1 className='font-semibold lg:text-custom-header-title-7rem  xl:text-custom-header-title text-5xl md:text-7xl'>HERREGODS</h1>
+                            <h1 className='font-semibold lg:text-custom-header-title-7rem xl:text-custom-header-title-xl 2xl:text-custom-header-title text-5xl md:text-7xl'>FREEK</h1>
+                            <h1 className='font-semibold lg:text-custom-header-title-7rem  xl:text-custom-header-title-xl 2xl:text-custom-header-title text-5xl md:text-7xl'>HERREGODS</h1>
                             <div className='leading-none lg:hidden inline-block'>
                                 <h1 className='font-semibold lg:text-custom-header-title md:text-3xl'>FRONT-END DEVELOPER</h1>
                             </div>
@@ -91,12 +92,12 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* bottom content */}
-                    <div className='flex lg:flex-row flex-col-reverse justify-between lg:items-end items-center lg:mt-20 pb-12 xl:mx-4 mx-6'>
+                    <div className='flex lg:flex-row flex-col-reverse justify-between lg:items-end items-center lg:mt-20 pb-12 xl:mx-6 mx-6'>
                         <MdArrowDownward className="xl:w-24 xl:h-36 md:w-16 md:h-24 w-14 h-16 text-custom-header-text mb-1 pulsate cursor-pointer" onClick={handleArrowClick} />
                         <p className='font-medium md:text-xl xl:text-2xl lg:max-w-60 xl:max-w-custom-width-25rem mb-5 xl:mb-7'>CRAFTING SEAMLESS, INTERACTIVE WEB EXPERIENCES WITH PRECISION AND STYLE</p>
                         <div className='leading-none lg:inline-block hidden'>
-                            <h1 className='font-semibold xl:text-custom-header-title lg:text-custom-header-title-7rem '>FRONT-END</h1>
-                            <h1 className='font-semibold xl:text-custom-header-title lg:text-custom-header-title-7rem '>DEVELOPER</h1>
+                            <h1 className='font-semibold xl:text-custom-header-title-xl 2xl:text-custom-header-title lg:text-custom-header-title-7rem'>FRONT-END</h1>
+                            <h1 className='font-semibold xl:text-custom-header-title-xl 2xl:text-custom-header-title lg:text-custom-header-title-7rem '>DEVELOPER</h1>
                         </div>
                     </div>
                 </div>

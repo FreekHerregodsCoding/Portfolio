@@ -5,8 +5,9 @@ export default {
     extend: {
       fontSize: {
         'custom-header-text': '1.1375rem',
-        'custom-header-title': '10rem',
-        'custom-header-title-7rem': '7rem',
+        'custom-header-title': '9rem',
+        'custom-header-title-xl': '7.5rem',
+        'custom-header-title-7rem': '5rem',
       },
       width: {
         'custom-header-image': '22rem',
