@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  margin: 0;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Rajdhani', sans-serif;
   background-color: #A0937D;
