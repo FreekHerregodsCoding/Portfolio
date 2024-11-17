@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ScrollArea } from '@/components/ui/scroll-area';
-
+import Resume from '../assets/FreekHerregodsCV_2024.pdf';
 
 import { FaHtml5, FaCss3Alt, FaReact, FaVuejs, FaAngular } from 'react-icons/fa';
 import { SiTailwindcss, SiGatsby, SiJavascript } from 'react-icons/si';
@@ -159,7 +160,7 @@ const InformationTab: React.FC = () => {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {experience.info.map((item, index) => (
-                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[140px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
+                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[140px] py-4 px-8 rounded-md flex flex-col justify-center items-center lg:items-start gap-1'>
                                                 <span className='text-cyan-300'>{item.duration}</span>
                                                 <h3 className='text-lg text-center lg:text-left text-white'>{item.title}</h3>
                                                 <div className="flex items-center gap-3">
@@ -182,7 +183,7 @@ const InformationTab: React.FC = () => {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {education.info.map((item, index) => (
-                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[140px] py-4 px-8 rounded-lg flex flex-col justify-center items-center lg:items-start gap-1'>
+                                            <li key={index} className='bg-custom-bg-color-button-disabled h-[140px] py-4 px-8 rounded-md flex flex-col justify-center items-center lg:items-start gap-1'>
                                                 <span className='text-cyan-300'>{item.duration}</span>
                                                 <h3 className='text-lg text-center lg:text-left text-white'>{item.title}</h3>
                                                 <div className="flex items-center gap-3">
@@ -207,7 +208,7 @@ const InformationTab: React.FC = () => {
                                         <li key={index}>
                                             <TooltipProvider delayDuration={100}>
                                                 <Tooltip>
-                                                    <TooltipTrigger className='w-full h-40 rounded-lg flex justify-center items-center bg-custom-bg-color-button-disabled'>
+                                                    <TooltipTrigger className='w-full h-40 rounded-md flex justify-center items-center bg-custom-bg-color-button-disabled'>
                                                         <div className='text-7xl text-white group-hover:text-cyan-300 transition-all duration-300'>{skill.icon}</div>
                                                     </TooltipTrigger>
                                                     <TooltipContent>
@@ -235,6 +236,11 @@ const InformationTab: React.FC = () => {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className='flex xl:justify-start justify-center gap-7'>
+
+                                    <a href={Resume} download className="bg-custom-bg-color-button-disabled hover:bg-custom-bg-color-button-active transition-all hover:shadow-md text-white px-4 py-2 rounded-md w-fit">Download Resume</a>
+                                </div>
+
                             </div>
                         </TabsContent>
                     </div>

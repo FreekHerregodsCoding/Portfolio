@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import testFoto from '../assets/image.jpg';
 import { Link } from 'react-router-dom';
-import { MdArrowDownward } from 'react-icons/md';
+import { MdArrowDownward, MdArrowRight } from 'react-icons/md';
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -45,11 +45,11 @@ const Hero: React.FC = () => {
             <section className="max-w-screen w-screen h-screen max-h-screen bg-custom-bg-color-gray">
                 <div className="container mx-auto h-full flex flex-col justify-between">
                     {/* topcontent */}
-                    <div className='hidden lg:flex justify-between font-medium text-custom-header-text mt-8 lg:mx-4 xl:mx-6'>
+                    <div className='hidden lg:flex justify-between font-medium text-custom-header-text mt-6 lg:mx-4 xl:mx-6 items-center'>
                         <p>Graduated in "Web Development & Design"</p>
                         <p>Currently looking for a front-end job</p>
                         <p>Based in Lierde, Belgium</p>
-                        <Link to="/contact" className='font-bold'>Contact me</Link>
+                        <Link to="/contact" className='bg-custom-bg-color-button-disabled hover:bg-custom-bg-color-button-active transition-all hover:shadow-md text-white px-4 py-2 rounded-md'>Contact me</Link>
                     </div>
                     <div className='lg:hidden mt-8 flex justify-center items-center h-16 mx-10'>
                         <Carousel
@@ -81,13 +81,18 @@ const Hero: React.FC = () => {
                         <div className='leading-none'>
                             <h1 className='font-semibold lg:text-custom-header-title-7rem xl:text-custom-header-title-xl 2xl:text-custom-header-title text-5xl md:text-7xl'>FREEK</h1>
                             <h1 className='font-semibold lg:text-custom-header-title-7rem  xl:text-custom-header-title-xl 2xl:text-custom-header-title text-5xl md:text-7xl'>HERREGODS</h1>
-                            <div className='leading-none lg:hidden inline-block'>
+                            <div className='leading-none lg:hidden flex flex-col gap-4'>
                                 <h1 className='font-semibold lg:text-custom-header-title md:text-3xl'>FRONT-END DEVELOPER</h1>
+                                <div className='flex items-center bg-custom-bg-color-button-disabled hover:bg-custom-bg-color-button-active text-white pl-3 py-1 w-fit rounded-md'>
+                                    <Link to="/contact" className=''>Let's work together</Link>
+                                    <MdArrowRight className='text-3xl' />
+                                </div>
+
                             </div>
                         </div>
 
                         <div className="hidden md:block w-custom-header-image">
-                            <img src={testFoto} alt="Freek Herregods" className="object-cover w-full lg:h-80 md:h-72" />
+                            <img src={testFoto} alt="Freek Herregods" className="object-cover w-full lg:h-80 md:h-72 rounded-md" />
                         </div>
                     </div>
 
