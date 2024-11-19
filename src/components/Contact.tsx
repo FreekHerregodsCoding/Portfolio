@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import emailjs from 'emailjs-com';
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 
@@ -75,6 +76,14 @@ const Contact: React.FC = () => {
     if (isValid) {
       // Handle form submission
       console.log('Form submitted:', formData);
+      // Send email using EmailJS
+      emailjs.send('service_u4326l6', 'template_06250nu', formData, 'ckJA1FxDdOWAit04K')
+        .then((response) => {
+          console.log('Email sent successfully:', response.status, response.text);
+        })
+        .catch((error) => {
+          console.error('Failed to send email:', error);
+        });
     }
   };
 
@@ -150,11 +159,11 @@ const Contact: React.FC = () => {
                   <SelectContent>
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
-                      <SelectItem value="webdev">Web Development</SelectItem>
-                      <SelectItem value="webdes">Web Design</SelectItem>
-                      <SelectItem value="joboffer">Job offer</SelectItem>
-                      <SelectItem value="specific">Specific question</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="WebDevelopment">Web Development</SelectItem>
+                      <SelectItem value="WebDesign">Web Design</SelectItem>
+                      <SelectItem value="JobOffer">Job offer</SelectItem>
+                      <SelectItem value="SpecificQuestion">Specific question</SelectItem>
+                      <SelectItem value="Other">Other</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
