@@ -29,6 +29,10 @@ const info = [
   },
 ];
 
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';;
+const userId = import.meta.env.VITE_EMAILJS_USER_ID || '';;
+
 
 const Contact: React.FC = () => {
   const navigate = useNavigate();
@@ -48,6 +52,8 @@ const Contact: React.FC = () => {
     service: false,
     message: false,
   });
+
+  const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -74,10 +80,21 @@ const Contact: React.FC = () => {
 
     const isValid = Object.values(newErrors).every((error) => !error);
     if (isValid) {
-      // Handle form submission
-      console.log('Form submitted:', formData);
+      const currentTime = Date.now();
+      if (lastSubmissionTime && currentTime - lastSubmissionTime < 60000) { // 1 minute rate limit
+        alert('Please wait a minute before submitting again.');
+        return;
+      }
+
+      setLastSubmissionTime(currentTime);
+
       // Send email using EmailJS
-      emailjs.send('service_u4326l6', 'template_06250nu', formData, 'ckJA1FxDdOWAit04K')
+      emailjs.send(
+        serviceId!,
+        templateId!,
+        formData,
+        userId!
+      )
         .then((response) => {
           console.log('Email sent successfully:', response.status, response.text);
         })
