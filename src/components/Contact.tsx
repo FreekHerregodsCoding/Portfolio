@@ -54,6 +54,7 @@ const Contact: React.FC = () => {
   });
 
   const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -97,6 +98,7 @@ const Contact: React.FC = () => {
       )
         .then((response) => {
           console.log('Email sent successfully:', response.status, response.text);
+          setIsSubmitted(true); // Show success message
         })
         .catch((error) => {
           console.error('Failed to send email:', error);
@@ -197,6 +199,7 @@ const Contact: React.FC = () => {
                 {errors.message && <FaTimesCircle className="absolute right-4 top-4 text-red-500" />}
               </div>
               <Button type="submit" className='bg-custom-bg-color-gray hover:bg-custom-bg-color-section2 transition-all hover:shadow-md text-black px-4 py-2 rounded-md w-fit text-md'>Send message</Button>
+              {isSubmitted && <p className="text-green-500 mt-4">Your message has been sent successfully!</p>}
             </form>
           </div>
 
