@@ -107,16 +107,16 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className='max-w-screen w-screen py-32 bg-custom-bg-color-section2 flex justify-center items-center'>
+    <section className='max-w-screen w-screen xl:max-h-screen pb-28 pt-36 xl:h-screen bg-custom-bg-color-section2 flex justify-center items-center'>
       <button
-        className="absolute top-4 left-4 flex items-center bg-custom-bg-color-button-disabled hover:bg-custom-bg-color-button-active transition-all hover:shadow-md text-white px-4 py-2 rounded-md"
+        className="absolute top-8 left-8 flex items-center bg-custom-bg-color-button-disabled hover:bg-custom-bg-color-button-active transition-all hover:shadow-md text-white px-4 py-2 rounded-md"
         onClick={() => navigate(-1)}
       >
         <FaArrowLeft className="mr-2 text-lg" />
         Back
       </button>
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-7">
+        <div className="flex flex-col xl:flex-row gap-7 xl:mx-8">
           {/* form */}
           <div className="order-2 xl:order-none">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-custom-bg-color-button-disabled rounded-lg md:mx-0 mx-6 shadow-sm">
